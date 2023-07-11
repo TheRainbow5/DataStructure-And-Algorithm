@@ -10,7 +10,7 @@ import org.junit.Test;
 public class test {
     @Test
     public void LinkedList(){
-        LinkedListTemplate<Integer> linkedList = new LinkedListTemplate<>();
+        singleLinkedListTemplate<Integer> linkedList = new singleLinkedListTemplate<>();
         //带有头节点的链表
 //        LinkedList_ linkedList = new LinkedList_();
         //添加元素

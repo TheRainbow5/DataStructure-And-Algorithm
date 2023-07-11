@@ -17,7 +17,7 @@ package LinkedList;
  *      3、双向链表
  * @DATE:2023/7/10
  */
-public class LinkedList_ {
+public class singleLinkedList {
     public Node head;  //头节点
     public int length=0; //计算节点个数（不包括头节点）
 
@@ -25,7 +25,7 @@ public class LinkedList_ {
      * 初始化带有头节点的链表
      *      head-->[data|next]-->[data|next]-->[data|next]-->null
      */
-    public LinkedList_(){
+    public singleLinkedList(){
         //初始化头节点
         head= new Node();
     }

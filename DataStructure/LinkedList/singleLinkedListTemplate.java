@@ -5,7 +5,7 @@ package LinkedList;
  *
  * @DATE:2023/7/10 0010
  */
-public class LinkedListTemplate<T> {
+public class singleLinkedListTemplate<T> {
     public Node head;  //头节点
     public int length=0; //计算节点个数（不包括头节点）
 
@@ -13,7 +13,7 @@ public class LinkedListTemplate<T> {
      * 初始化带有头节点的链表
      *      head-->[data|next]-->[data|next]-->[data|next]-->null
      */
-    public LinkedListTemplate(){
+    public singleLinkedListTemplate(){
         //初始化头节点
         head= new Node();
     }
