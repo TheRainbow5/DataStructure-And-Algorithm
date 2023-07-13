@@ -54,7 +54,9 @@ public class ArrayQueue<T> {
             throw new RuntimeException("队列为空");
         } else {
             T temp = (T) elementData[front];
-            front++;  //fronnt索引向前移动一位
+            // 队首指针向后移动一位，若越过尾部则返回到数组头部
+            front = (front + 1) % CAPACITY;
+            size--;
             return temp;
         }
     }
