@@ -1,6 +1,6 @@
-# DataStructure-And-Algorithm 数据结构与算法
+# DataStructure-And-Algorithm 
 
-该仓库使用JAVA完成各种数据结构与算法。每个数据结构与算法都有详细的解释和示例用法。
+该仓库目前使用JAVA完成各种数据结构与算法。每个数据结构与算法都有详细的解释和示例用法。
 
 ## 目录
 
@@ -17,8 +17,7 @@
 后续可能实现方式涵盖多种编程语言，以满足不同的偏好和学习需求。
 
 无论你是初学者想要学习数据结构与算法，还是有经验的开发人员想要复习知识，本仓库都可以作为一个有价值的资源。
-
-
+[详细文档](https://www.notion.so/Data-Strcuture-AND-Algorithm-fcc1445eeb574de687cb2a1cf75c0e85?pvs=4)
 
 
 ## 数据结构
