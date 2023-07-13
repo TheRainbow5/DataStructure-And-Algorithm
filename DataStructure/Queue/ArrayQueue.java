@@ -113,6 +113,4 @@ public class ArrayQueue<T> {
         }
         System.out.println("]");
     }
-
-
 }
