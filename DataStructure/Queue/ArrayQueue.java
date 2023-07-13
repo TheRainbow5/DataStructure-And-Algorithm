@@ -10,8 +10,8 @@ package Queue;
 public class ArrayQueue<T> {
     private final int ratio = 2;   //数组扩容倍数
     private int CAPACITY = 10;  //数组默认容量
+    private int front=0;
     private int size = 0;  //元素个数
-    private int front=0; //遍历元素的索引
     private Object[] elementData;  //存放数组个数
 
     public ArrayQueue() {
@@ -44,8 +44,9 @@ public class ArrayQueue<T> {
 
     /**
      * 出列
-     * 1、front索引用于访问队列，实际元素仍保留在数组中
-     * 降低时间复杂度T(n)=O(1)
+     * 1、临时变量temp存储队首元素
+     * 2、后面元素向前移动一位
+     *
      * @return
      */
     public T pop() {
@@ -53,10 +54,8 @@ public class ArrayQueue<T> {
         if (isEmpty()) {
             throw new RuntimeException("队列为空");
         } else {
+            front=(front+1)%CAPACITY;
             T temp = (T) elementData[front];
-            // 队首指针向后移动一位，若越过尾部则返回到数组头部
-            front = (front + 1) % CAPACITY;
-            size--;
             return temp;
         }
     }
@@ -65,7 +64,7 @@ public class ArrayQueue<T> {
      * 访问队首元素，不是删除队首元素
      */
     public T peek() {
-        return (T) elementData[front];
+        return (T) elementData[0];
     }
 
 
@@ -115,4 +114,6 @@ public class ArrayQueue<T> {
         }
         System.out.println("]");
     }
+
+
 }
