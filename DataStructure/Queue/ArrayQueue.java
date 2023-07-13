@@ -11,6 +11,7 @@ public class ArrayQueue<T> {
     private final int ratio = 2;   //数组扩容倍数
     private int CAPACITY = 10;  //数组默认容量
     private int size = 0;  //元素个数
+    private int front=0; //遍历元素的索引
     private Object[] elementData;  //存放数组个数
 
     public ArrayQueue() {
@@ -43,9 +44,8 @@ public class ArrayQueue<T> {
 
     /**
      * 出列
-     * 1、临时变量temp存储队首元素
-     * 2、后面元素向前移动一位
-     *
+     * 1、front索引用于访问队列，实际元素仍保留在数组中
+     * 降低时间复杂度T(n)=O(1)
      * @return
      */
     public T pop() {
@@ -53,13 +53,8 @@ public class ArrayQueue<T> {
         if (isEmpty()) {
             throw new RuntimeException("队列为空");
         } else {
-            T temp = (T) elementData[0];
-            //所有元素向前移动一位
-            for (int i = 0; i < CAPACITY - 1; i++) {
-                elementData[i] = elementData[i + 1];
-            }
-            //最后一位为空
-            elementData[CAPACITY - 1] = null;
+            T temp = (T) elementData[front];
+            front++;  //fronnt索引向前移动一位
             return temp;
         }
     }
@@ -68,7 +63,7 @@ public class ArrayQueue<T> {
      * 访问队首元素，不是删除队首元素
      */
     public T peek() {
-        return (T) elementData[0];
+        return (T) elementData[front];
     }
 
 
