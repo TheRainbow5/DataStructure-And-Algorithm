@@ -36,12 +36,12 @@ public class ArrayListStack<T> {
         if (isFull()) {
             //扩容
             extendArray();
+            elementData[size] = value;
         } else {
             elementData[size] = value;
-            size++;  //元素个数+1
         }
+        size++;  //元素个数+1
     }
-
     /**
      * 出栈
      * 1、判断栈是否为空
