@@ -1,4 +1,4 @@
-package Array;
+package Basic.chap1_Array;
 
 import org.junit.Test;
 

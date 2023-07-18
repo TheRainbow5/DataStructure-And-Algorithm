@@ -1,37 +1,39 @@
-package Queue;
+package Advanced.chap4_Stack;
 
 /**
  * Rainbow
- * 队列遵循先进先出原则的线性结构
- * 队首  <--出列--[1,2,3,4,4,5,6]<--入列--   队尾
+ * 基于动态数组实现栈
  *
- * @DATE:2023/7/13 0013
+ * @DATE:2023/7/12 0012
  */
-public class ArrayQueue<T> {
+public class ArrayListStack<T> {
     private final int ratio = 2;   //数组扩容倍数
     private int CAPACITY = 10;  //数组默认容量
-    private int front=0;
     private int size = 0;  //元素个数
     private Object[] elementData;  //存放数组个数
 
-    public ArrayQueue() {
-        elementData = new Object[CAPACITY];
+    public ArrayListStack() {
+        elementData = new Object[CAPACITY];  //默认数组长度
     }
 
-    public ArrayQueue(int capacity) {
-        this.CAPACITY = capacity;
+    /**
+     * 自定义栈的长度
+     * @param capacity
+     */
+    public ArrayListStack(int capacity) {
+        CAPACITY = capacity;
         elementData = new Object[CAPACITY];
     }
 
     /**
-     * 添加元素
-     *
+     * 入栈
+     * size记录元素个数，同时也可以作为数组的下一个索引
+     * 每次入栈，size++
      * @param value
      */
     public void push(T value) {
         //判断是否栈满
         if (isFull()) {
-            System.out.println("队列已满，扩容");
             //扩容
             extendArray();
             elementData[size] = value;
@@ -40,34 +42,39 @@ public class ArrayQueue<T> {
         }
         size++;  //元素个数+1
     }
-
-
     /**
-     * 出列
-     * 1、临时变量temp存储队首元素
-     * 2、后面元素向前移动一位
-     *
-     * @return
+     * 出栈
+     * 1、判断栈是否为空
+     * 2、temp临时存储弹出的元素
+     * 3、元素个数-1
      */
     public T pop() {
-        //判断是否为空
         if (isEmpty()) {
-            throw new RuntimeException("队列为空");
+            throw new RuntimeException("栈为空");
         } else {
-            front=(front+1)%CAPACITY;
-            T temp = (T) elementData[front];
+            int index = size - 1;
+            //元素向下转型
+            T temp = (T) elementData[index];
+            elementData[index] = null;
+            size--;  //元素个数-1
             return temp;
         }
     }
 
     /**
-     * 访问队首元素，不是删除队首元素
+     * 访问栈顶元素，不是删除元素
      */
     public T peek() {
-        return (T) elementData[0];
+        if (isEmpty()) {
+            throw new RuntimeException("栈为空");
+        } else {
+            return (T) elementData[size - 1];
+        }
     }
 
-
+    /**
+     * 判断栈是否为空
+     */
     public boolean isEmpty() {
         return size == 0;
     }
@@ -114,6 +121,5 @@ public class ArrayQueue<T> {
         }
         System.out.println("]");
     }
-
 
 }

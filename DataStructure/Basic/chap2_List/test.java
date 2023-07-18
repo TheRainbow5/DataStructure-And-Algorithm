@@ -1,4 +1,4 @@
-package List;
+package Basic.chap2_List;
 
 import org.junit.Test;
 

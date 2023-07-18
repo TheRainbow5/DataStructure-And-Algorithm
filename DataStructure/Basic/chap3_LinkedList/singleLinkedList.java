@@ -1,11 +1,24 @@
-package LinkedList;
+package Basic.chap3_LinkedList;
 
 /**
  * Rainbow
+ * 数组的数据在内存中是连续存储，当数组扩容所申请的内存连续地址超出了内存最大范围，
+ * 数组就无法完成扩容，数据无法存储。
+ * <p>
+ * 链表则表现的十分灵活，数据可以存储在非连续的内存空间。
+ * 每个元素都是一个节点对象，各个节点之间通过指针连接
+ * （指针记录了各个节点的内存地址，从而保证了各个节点分散的存储在内存）
+ * 单链表的存储结构有两种：
+ * 1、不带头节点：[data|next]-->[data|next]-->[data|next]-->null
+ * 2、带头节点：head-->[data|next]-->[data|next]-->[data|next]-->null
+ * 链表的分类
+ * 1、单链表
+ * 2、环形链表
+ * 3、双向链表
  *
  * @DATE:2023/7/10
  */
-public class singleLinkedListTemplate<T> {
+public class singleLinkedList {
     public Node head;  //头节点
     public int length = 0; //计算节点个数（不包括头节点）
 
@@ -13,7 +26,7 @@ public class singleLinkedListTemplate<T> {
      * 初始化带有头节点的链表
      * head-->[data|next]-->[data|next]-->[data|next]-->null
      */
-    public singleLinkedListTemplate() {
+    public singleLinkedList() {
         //初始化头节点
         head = new Node();
     }
@@ -21,7 +34,7 @@ public class singleLinkedListTemplate<T> {
     /**
      * 添加元素--头插法
      */
-    public void addFirst(T val) {
+    public void addFirst(int val) {
         Node newNode = new Node(val);
         //先指向head后的链表，防止书丢失
         newNode.next = head.next;
@@ -35,7 +48,7 @@ public class singleLinkedListTemplate<T> {
      * 1、初始化一个辅助指针temp
      * 2、遍历辅助指针temp指向最后一个节点
      */
-    public void addTail(T val) {
+    public void addTail(int val) {
         Node temp = head;
         Node node = new Node(val);
         //遍历链表
@@ -57,7 +70,7 @@ public class singleLinkedListTemplate<T> {
      * @param pos：插入的位置
      * @param value：插入的值
      */
-    public void insertPos(int pos, T value) {
+    public void insertPos(int pos, int value) {
         Node temp = head;
         Node node = new Node(value);
         if (pos < 0 || pos > length) {
@@ -121,7 +134,7 @@ public class singleLinkedListTemplate<T> {
      * @param pos：位置
      * @param value：数值
      */
-    public void set(int pos, T value) {
+    public void set(int pos, int value) {
         Node temp = head;
         if (pos < 0 || pos > length) {
             System.out.println("超出链表范围");
@@ -134,10 +147,11 @@ public class singleLinkedListTemplate<T> {
         }
     }
 
-    public T get(int pos) {
+    public int get(int pos) {
         Node temp = head;
         if (pos < 0 || pos > length) {
-            throw new RuntimeException("超出链表范围");
+            System.out.println("超出链表范围");
+            return -1;
         } else {
             for (int i = 0; i < pos; i++) {
                 temp = temp.next;
@@ -146,15 +160,15 @@ public class singleLinkedListTemplate<T> {
         }
     }
 
-    public Object getFirst() {
+    public int getFirst() {
         return head.next.data;
     }
 
-    public void setFirst(T value) {
+    public void setFirst(int value) {
         head.next.data = value;
     }
 
-    public Object getLast() {
+    public int getLast() {
         Node temp = head;
         while (temp.next != null) {
             temp = temp.next;
@@ -162,7 +176,7 @@ public class singleLinkedListTemplate<T> {
         return temp.data;
     }
 
-    public void setLast(T value) {
+    public void setLast(int value) {
         Node temp = head;
         while (temp.next != null) {
             temp = temp.next;
@@ -192,17 +206,18 @@ public class singleLinkedListTemplate<T> {
     /**
      * 节点内部类
      */
-    public class Node {
-        T data;
+    private class Node {
+        int data;
         Node next;
 
         //初始化头节点
         Node() {
-            this.next = null;
+            data = -1;
+            next = null;
         }
 
         //新建节点
-        Node(T x) {
+        Node(int x) {
             this.data = x;
             this.next = null;
         }

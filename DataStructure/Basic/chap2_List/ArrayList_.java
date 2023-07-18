@@ -1,4 +1,4 @@
-package List;
+package Basic.chap2_List;
 
 /**
  * 数组长度不可变导致实用性降低。在许多情况下，
