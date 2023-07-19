@@ -34,13 +34,13 @@ class KeyValuePair<T, E> {
 }
 
 public class LinkedListHashTable<T, E> {
-    private final int extendRatio = 2;  //扩容倍数
-    private final double loadThres = 0.75;
     //数组容量
     private int CAPACITY = 10;
     private int Size = 0;
+    private final int extendRatio = 2;  //扩容倍数
+    private final double loadThres = 0.75;
     //存储链表的数组
-    private ArrayList<LinkedList<KeyValuePair>> buckets;
+    private ArrayList<LinkedList<KeyValuePair<T, E>>> buckets;
 
     public LinkedListHashTable() {
         buckets = new ArrayList<>(CAPACITY);
@@ -98,9 +98,9 @@ public class LinkedListHashTable<T, E> {
         //计算哈希值
         int index = hash(key);
         //找到桶的位置
-        LinkedList<KeyValuePair> linkedList = buckets.get(index);
+        LinkedList<KeyValuePair<T, E>> linkedList = buckets.get(index);
         //链表不为空时，遍历链表查找key相同的节点
-        for (KeyValuePair kvp : linkedList) {
+        for (KeyValuePair<T, E> kvp : linkedList) {
             //1、存在则覆盖元素
             if (kvp.getKey() == key) {
                 kvp.setValue(value);
@@ -108,7 +108,7 @@ public class LinkedListHashTable<T, E> {
             }
         }
         //链表为空，添加新节点
-        linkedList.addLast(new KeyValuePair(key, value));
+        linkedList.addLast(new KeyValuePair<>(key, value));
         Size++;
     }
 
@@ -123,12 +123,12 @@ public class LinkedListHashTable<T, E> {
      */
     public E get(T key) {
         int index = hash(key);
-        LinkedList<KeyValuePair> linkedList = buckets.get(index);
+        LinkedList<KeyValuePair<T, E>> linkedList = buckets.get(index);
         //遍历链表
-        for (KeyValuePair kvp : linkedList) {
+        for (KeyValuePair<T, E> kvp : linkedList) {
             //找到key相同的节点
             if (kvp.getKey() == key) {
-                return (E) kvp.getValue();
+                return kvp.getValue();
             }
         }
         return null;
@@ -145,7 +145,7 @@ public class LinkedListHashTable<T, E> {
     public void remove(T key) {
         //计算哈希值
         int index = hash(key);
-        LinkedList<KeyValuePair> linkedList = buckets.get(index);
+        LinkedList<KeyValuePair<T, E>> linkedList = buckets.get(index);
         //遍历列表中的节点
         //删除节点
         linkedList.removeIf(kvp -> kvp.getKey() == key);
@@ -159,7 +159,7 @@ public class LinkedListHashTable<T, E> {
      */
     public void extend() {
         // 暂存原哈希表
-        ArrayList<LinkedList<KeyValuePair>> bucketsTemp = buckets;
+        ArrayList<LinkedList<KeyValuePair<T, E>>> bucketsTemp = buckets;
         //初始化扩容的新表
         CAPACITY = CAPACITY * extendRatio;
         buckets = new ArrayList<>(CAPACITY);
@@ -170,9 +170,9 @@ public class LinkedListHashTable<T, E> {
             buckets.add(new LinkedList<>());
         }
         //遍历旧表的元素，赋值到新表
-        for (LinkedList<KeyValuePair> bucket : bucketsTemp) {
-            for (KeyValuePair kvp : bucket) {
-                put((T) kvp.getKey(), (E) kvp.getValue());
+        for (LinkedList<KeyValuePair<T, E>> bucket : bucketsTemp) {
+            for (KeyValuePair<T, E> kvp : bucket) {
+                put(kvp.getKey(), kvp.getValue());
             }
         }
 
