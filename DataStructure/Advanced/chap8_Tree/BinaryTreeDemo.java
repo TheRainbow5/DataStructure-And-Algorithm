@@ -92,12 +92,12 @@ class BinaryTree {
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class Node {
-    private int data;
+class Node<T> {
+    private T data;
     private Node left;  //默认null
     private Node right;  //默认null
 
-    public Node(int data) {
+    public Node(T data) {
         this.data = data;
     }
 
