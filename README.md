@@ -2,7 +2,7 @@
 
 该仓库目前使用JAVA完成各种数据结构与算法。每个数据结构与算法都有详细的解释和示例用法。
 
-## 目录
+# 目录
 
 - [简介](#简介)
 - [数据结构](#数据结构)
@@ -70,4 +70,4 @@
 
 ## 参考文献
 
-- [Hello 算法](https://github.com/krahets/hello-algo)
+- [Hello 算法](https://github.com/krahets/hello-algo)~~

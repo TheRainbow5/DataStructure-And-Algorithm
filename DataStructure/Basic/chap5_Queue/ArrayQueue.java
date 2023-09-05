@@ -1,4 +1,4 @@
-package Advanced.chap5_Queue;
+package Basic.chap5_Queue;
 
 /**
  * Rainbow

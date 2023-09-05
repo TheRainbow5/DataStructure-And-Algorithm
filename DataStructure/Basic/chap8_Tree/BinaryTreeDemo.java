@@ -1,4 +1,4 @@
-package Advanced.chap8_Tree;
+package Basic.chap8_Tree;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,22 +7,21 @@ import lombok.NoArgsConstructor;
 /**
  * Rainbow
  * 基于链表实现二叉树
+ * 利用前中后序实现树的遍历、查找
  *
- * @DATE:2023/7/24 0024
+ * @DATE:2023/7/24
  */
-
-
 public class BinaryTreeDemo {
     public static void main(String[] args) {
         //先创建一颗二叉树
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
         //创建需要的节点
-        Node root = new Node(1);
-        Node node1 = new Node(2);
-        Node node2 = new Node(3);
-        Node node3 = new Node(4);
-        Node node4 = new Node(5);
-        Node node5 = new Node(6);
+        Node<Integer> root = new Node<>(1);
+        Node<Integer> node1 = new Node<>(2);
+        Node<Integer> node2 = new Node<>(3);
+        Node<Integer> node3 = new Node<>(4);
+        Node<Integer> node4 = new Node<>(5);
+        Node<Integer> node5 = new Node<>(6);
         //初始化二叉树
         binaryTree.setRoot(root);  //设置根节点
         root.setLeft(node1);
@@ -30,6 +29,9 @@ public class BinaryTreeDemo {
         node1.setLeft(node3);
         node1.setRight(node4);
         node2.setLeft(node5);
+        /**
+         * 遍历
+         */
         //测试前序遍历
         System.out.println("***前序遍历***");
         binaryTree.preOrder();
@@ -40,6 +42,13 @@ public class BinaryTreeDemo {
         System.out.println("***后序遍历***");
         binaryTree.pastOrder();
 
+        /**
+         * 查找
+         */
+        System.out.println("*****查找*****");
+        Node<Integer> integerNode = binaryTree.preOrderSearch(2);
+        System.out.println(integerNode);
+
     }
 }
 
@@ -47,14 +56,17 @@ public class BinaryTreeDemo {
  * 作为根节点
  * 初始化二叉树root节点
  */
-class BinaryTree {
-    private Node root;
+class BinaryTree<E> {
+    private Node<E> root;
 
     //初始化roo节点
-    public void setRoot(Node root) {
+    public void setRoot(Node<E> root) {
         this.root = root;
     }
 
+    /**
+     * 遍历
+     */
     //前序遍历
     public void preOrder() {
         //从根节点开始遍历
@@ -84,6 +96,20 @@ class BinaryTree {
             System.out.println("二叉树为空，无法遍历");
         }
     }
+
+    /**
+     * 查找
+     */
+    public Node<E> preOrderSearch(E target) {
+        Node<E> resNode = null;
+        //从根节点开始遍历
+        if (this.root != null) {
+            resNode = this.root.preOederSearch((E) target);
+        } else {
+            System.out.println("二叉树为空，无法遍历");
+        }
+        return resNode;
+    }
 }
 
 /**
@@ -103,7 +129,7 @@ class Node<T> {
 
     @Override
     public String toString() {
-        return new String(String.valueOf(this.data));
+        return String.valueOf(this.data);
     }
 
     /**
@@ -163,6 +189,40 @@ class Node<T> {
         //输出当前节点
         System.out.println(this.data);
     }
+
+
+    /**
+     * 前序遍历查找
+     * 1、先判断当前节点是否为目标节点
+     * a、如果相等，返回节点
+     * b、如果不相等，则判断左子节点是否为空，如果不为空，则左子节点继续递归前序查找
+     * 2、如果左递归前序查找，找到节点，则返回；
+     * 3、判断当前节点的右节点是否为空
+     * a、如果为空，返回
+     * b、如果不为空，继续
+     *
+     * @return
+     */
+    public Node<T> preOederSearch(T target) {
+        //判断是否相等
+        if (this.data.equals(target)) {
+            return this;
+        }
+        Node<T> resNode = null;
+        //向左递归
+        if (this.left != null) {
+            resNode = this.left.preOederSearch(target);
+        }
+        if (resNode != null) {    //找到节点后，就停止搜索（剪枝）
+            return resNode;
+        }
+        //向有递归
+        if (this.right != null) {
+            resNode = this.right.preOederSearch(target);
+        }
+        return resNode;
+    }
+
 }
 
 

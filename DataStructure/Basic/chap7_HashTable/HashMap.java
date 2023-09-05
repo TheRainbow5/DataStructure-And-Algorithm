@@ -1,4 +1,4 @@
-package Advanced.chap7_HashTable;
+package Basic.chap7_HashTable;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -33,7 +33,7 @@ class KeyValuePair<T, E> {
     private E value;
 }
 
-public class LinkedListHashTable<T, E> {
+public class HashMap<T, E> {
     //数组容量
     private int CAPACITY = 10;
     private int Size = 0;
@@ -42,7 +42,7 @@ public class LinkedListHashTable<T, E> {
     //存储链表的数组
     private ArrayList<LinkedList<KeyValuePair<T, E>>> buckets;
 
-    public LinkedListHashTable() {
+    public HashMap() {
         buckets = new ArrayList<>(CAPACITY);
         //初始化链表
         for (int i = 0; i < CAPACITY; i++) {
@@ -50,7 +50,7 @@ public class LinkedListHashTable<T, E> {
         }
     }
 
-    public LinkedListHashTable(int capacity) {
+    public HashMap(int capacity) {
         this.CAPACITY = capacity;
         buckets = new ArrayList<>(CAPACITY);
         //初始化链表
