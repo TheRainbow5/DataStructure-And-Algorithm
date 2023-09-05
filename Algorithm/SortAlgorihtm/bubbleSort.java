@@ -1,4 +1,4 @@
-package Sorted;
+package SortAlgorihtm;
 
 /**
  * Rainbow
