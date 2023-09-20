@@ -208,6 +208,7 @@ public class singleLinkedList {
      */
     private class Node {
         int data;
+
         Node next;
 
         //初始化头节点

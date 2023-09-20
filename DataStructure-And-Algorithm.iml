@@ -6,6 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/DataStructure" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/Algorithm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ReAlg" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SortAlgorithm2" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
