@@ -15,6 +15,26 @@ import java.util.List;
 
 
 public class HashMap<E> {
+    public static void main(String[] args) {
+        HashMap<Object> map = new HashMap<>();
+        map.put(1, 23);
+        map.put(2, 25);
+        map.put(3, 22);
+        map.put(15, 23);
+        map.put(6, 23);
+        map.put(1, 2444);
+        map.list();
+
+
+        //查找
+        System.out.println(map.get(1));
+
+        //删除元素
+        map.remove(15);
+        map.list();
+
+
+    }
 
     private final double loadFactor = 0.75;  //负载因子
     private final int extendRatio = 2;   //扩容的倍数
@@ -45,27 +65,6 @@ public class HashMap<E> {
         for (int i = 0; i < CAPACITY; i++) {
             buckets.add(new LinkedList<>());
         }
-    }
-
-    public static void main(String[] args) {
-        HashMap<Object> map = new HashMap<>();
-        map.put(1, 23);
-        map.put(2, 25);
-        map.put(3, 22);
-        map.put(15, 23);
-        map.put(6, 23);
-        map.put(1, 2444);
-        map.list();
-
-
-        //查找
-        System.out.println(map.get(1));
-
-        //删除元素
-        map.remove(15);
-        map.list();
-
-
     }
 
     /**
