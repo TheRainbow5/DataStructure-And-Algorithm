@@ -4,40 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="000e98be-fc12-40f1-ba46-eca259e10eeb" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/leetcode/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/leetcode/statistics.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap3_LinkedList/singleLinkedList$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap3_LinkedList/singleLinkedListTemplate$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap4_Stack/LinkedListStack$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap5_Queue/LinkedListQueue$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap6_Hash/HashMap$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap7_Tree/LinkedListTree$TreeNode.class" afterDir="false" />
+    <list default="true" id="000e98be-fc12-40f1-ba46-eca259e10eeb" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic/chap1_Array/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic/chap2_List/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic/chap3_LinkedList/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic/chap4_Stack/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic/chap5_Queue/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic/chap6_Hash/HashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/Basic/chap6_Hash/HashMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic/chap7_Tree/LinkedListTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReAlg/SortAlgorithm/SelectionSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hello-algo-zh-java.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap6_Hash/Hash.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap6_Hash/Hash.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap6_Hash/HashMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap6_Hash/HashMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap6_Hash/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap6_Hash/LinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap6_Hash/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap6_Hash/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap7_Tree/LinkedListTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/Basic/chap7_Tree/LinkedListTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/DataStructure-And-Algorithm/SortAlgorithm/SelectionSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basic/chap7_Tree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/Basic/chap7_Tree/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basic/chap7_Tree/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/Basic/chap7_Tree/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/APP.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/APP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/chap7_Tree/BinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/chap7_Tree/BinaryTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataStructure/chap7_Tree/TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataStructure/chap7_Tree/TreeNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/DataStructure/APP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DataStructure/APP.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,28 +37,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.saveactions",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.saveactions&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="APP.testBinaryTree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataStructure" />
@@ -92,19 +66,6 @@
       <option name="MAIN_CLASS_NAME" value="APP" />
       <option name="METHOD_NAME" value="testBinaryTree" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="DataStructure" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="DataStructure" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,10 +88,40 @@
       <workItem from="1687417120147" duration="62000" />
       <workItem from="1687499669770" duration="98000" />
       <workItem from="1697964300813" duration="3285000" />
+      <workItem from="1697967983201" duration="351000" />
+      <workItem from="1698058641014" duration="4763000" />
+      <workItem from="1698111233101" duration="667000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="二叉树的遍历" />
+    <option name="LAST_COMMIT_MESSAGE" value="二叉树的遍历" />
   </component>
 </project>

@@ -13,20 +13,45 @@ public class APP {
         //创建一颗二叉树
         BinaryTree binaryTree = new BinaryTree();
         //创建树节点
-        TreeNode<String> root = new TreeNode<>("宋江");   //根节点
-        TreeNode<String> node2 = new TreeNode<>("吴用");
-        TreeNode<String> node3 = new TreeNode<>("林冲");
-        TreeNode<String> node4 = new TreeNode<>("卢俊义");
+        TreeNode<Integer> root = new TreeNode<>(1);   //根节点
+        TreeNode<Integer> node2 = new TreeNode<>(2);
+        TreeNode<Integer> node3 = new TreeNode<>(3);
+        TreeNode<Integer> node4 = new TreeNode<>(4);
+        TreeNode<Integer> node5 = new TreeNode<>(5);
+        TreeNode<Integer> node6 = new TreeNode<>(6);
+        TreeNode<Integer> node7 = new TreeNode<>(7);
 
         //手动创建二叉树
         root.setLeft(node2);
         root.setRight(node3);
-        node3.setRight(node4);
-        binaryTree.setRoot(root);
+        node2.setLeft(node4);
+        node2.setRight(node5);
+        node3.setLeft(node6);
+        node3.setRight(node7);
+        binaryTree.setRoot(root);  //设置为根节点
 
-        //遍历二叉树
+        /**
+         *遍历二叉树
+         */
+        System.out.print("前序遍历：");
         root.preOrder();  //前序遍历
+        System.out.println();
+        System.out.print("中序遍历：");
         root.inOrder();   //中序遍历
+        System.out.println();
+        System.out.print("后序遍历：");
         root.postOrder(); //后序遍历
+        System.out.println();
+        /**
+         * 搜索二叉树
+         */
+        TreeNode<Integer> pn = root.preSearch(1);
+        System.out.println(pn);
+
+        TreeNode<Integer> psn = root.postSearch(2);
+        System.out.println(psn);
+
+        TreeNode<Integer> in = root.postSearch(3);
+        System.out.println(in);
     }
 }

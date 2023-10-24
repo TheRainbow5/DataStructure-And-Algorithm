@@ -36,12 +36,12 @@ public class TreeNode<T> {
     public void preOrder() {
         System.out.print(data + " ");   //输出根节点
         //递归左子树
-        if (left != null) {
-            left.preOrder();
+        if (this.left != null) {
+            this.left.preOrder();
         }
         //递归右子树
-        if (right != null) {
-            right.preOrder();
+        if (this.right != null) {
+            this.right.preOrder();
         }
     }
 
@@ -71,14 +71,80 @@ public class TreeNode<T> {
      */
     public void postOrder() {
         //递归左子树
-        if (left != null) {
-            left.postOrder();
+        if (this.left != null) {
+            this.left.postOrder();
         }
         //递归右子树
-        if (right != null) {
-            right.postOrder();
+        if (this.right != null) {
+            this.right.postOrder();
         }
         System.out.print(data + " ");   //输出根节点
     }
+
+
+    /**
+     * 前序搜索
+     * 1、先判断当前节点是否等于目标节点，如果相等，则返回当前节点
+     * 2、如果当前节点的左子节点不为空，则递归调用前序搜索函数来搜索左子树，找到则返回。
+     * 3、如果当前节点的右子节点不为空，则递归调用前序搜索函数来搜索右子树，找到则返回。
+     */
+    public TreeNode<T> preSearch(T data) {
+        TreeNode<T> resultNode = null;   //存储搜索的节点
+        //判断当前节点是否为目标节点
+        if (this.data.equals(data)) {
+            return this;
+        }
+        if (this.left != null) {
+            resultNode = this.left.preSearch(data);  //左节点递归搜索
+        }
+        if (resultNode == null && this.right != null) {  //左子节点没有找到
+            resultNode = this.right.preSearch(data);  // 右节点递归搜索
+        }
+        return resultNode;
+    }
+
+    /**
+     * 中序搜索
+     * 1、如果当前节点的左子节点不为空，则递归调用前序搜索函数来搜索左子树，找到则返回。
+     * 2、先判断当前节点是否等于目标节点，如果相等，则返回当前节点
+     * 3、如果当前节点的右子节点不为空，则递归调用后序搜索函数来搜索右子树，找到则返回。
+     */
+    public TreeNode<T> inSearch(T value) {
+        TreeNode<T> resultNode = null;
+        if (this.left != null) {
+            resultNode = this.left.inSearch(value);
+        }
+        if (this.data.equals(value) && resultNode == null) {
+            resultNode = this;
+        }
+        if (this.right != null && resultNode == null) {
+            resultNode = this.right.inSearch(value);
+        }
+        return resultNode;
+    }
+
+    /**
+     * 后序搜索
+     * 1、如果当前节点的左子节点不为空，则递归调用前序搜索函数来搜索左子树，找到则返回。
+     * 2、如果当前节点的右子节点不为空，则递归调用后序搜索函数来搜索右子树，找到则返回。
+     * 3、先判断当前节点是否等于目标节点，如果相等，则返回当前节点
+     */
+    public TreeNode<T> postSearch(T value) {
+        TreeNode<T> resultNode = null;   //存储搜索的节点
+
+        if (this.left != null) {
+            resultNode = this.left.postSearch(value);  //左节点递归搜索
+        }
+        if (resultNode == null && this.right != null) { //左子节点找到，就不进行右递归
+            resultNode = this.right.postSearch(value); // 右节点递归搜索
+        }
+        //判断当前节点是否为目标节点
+        if (this.data.equals(value) && resultNode == null) {
+            resultNode = this;
+        }
+        return resultNode;
+    }
+
+
 }
 
