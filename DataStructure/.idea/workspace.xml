@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="000e98be-fc12-40f1-ba46-eca259e10eeb" name="变更" comment="变更">
+    <list default="true" id="000e98be-fc12-40f1-ba46-eca259e10eeb" name="变更" comment="二叉树的搜索">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Basic/chap7_Tree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/Basic/chap7_Tree/BinaryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Basic/chap7_Tree/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/Basic/chap7_Tree/TreeNode.java" afterDir="false" />
@@ -90,8 +90,17 @@
       <workItem from="1697964300813" duration="3285000" />
       <workItem from="1697967983201" duration="351000" />
       <workItem from="1698058641014" duration="4763000" />
-      <workItem from="1698111233101" duration="667000" />
+      <workItem from="1698111233101" duration="3681000" />
     </task>
+    <task id="LOCAL-00001" summary="二叉树的搜索">
+      <option name="closed" value="true" />
+      <created>1698111929921</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698111929921</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +131,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="二叉树的遍历" />
-    <option name="LAST_COMMIT_MESSAGE" value="二叉树的遍历" />
+    <MESSAGE value="二叉树的搜索" />
+    <option name="LAST_COMMIT_MESSAGE" value="二叉树的搜索" />
   </component>
 </project>

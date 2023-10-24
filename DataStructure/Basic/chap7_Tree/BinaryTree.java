@@ -13,6 +13,26 @@ public class BinaryTree<T> {
     }
 
     /**
+     * 删除节点
+     *
+     * @param value 要删除的节点值
+     */
+    public void remove(T value) {
+        if (this.root != null) {
+            if (this.root.getData().equals(value)) {     //root为目标节点
+                this.root.left = null;
+                this.root.right = null;
+                this.root.setData(null);
+            } else {
+                //删除子节点
+                this.root.remove(value);
+            }
+        } else {
+            System.out.println("二叉树为空，无法删除");
+        }
+    }
+
+    /**
      * 前序遍历
      */
     public void preOrder() {
@@ -80,4 +100,6 @@ public class BinaryTree<T> {
             return null;
         }
     }
+
+
 }

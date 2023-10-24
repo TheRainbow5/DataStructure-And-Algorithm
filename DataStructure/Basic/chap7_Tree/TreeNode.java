@@ -145,6 +145,36 @@ public class TreeNode<T> {
         return resultNode;
     }
 
+    /**
+     * 删除节点（广度优先搜索）
+     * 判断root节点是否为目标节点，不是则递归查找，是则返回
+     * 1、判断当前节点的子节点是否为目标节点
+     * 2、如果左子节点不为空，
+     * 2.1、左子节点是目标节点，则this.left=null，结束递归。
+     * 2.2、左子节点不是目标节点，则继续递归左子树，直到找到。
+     * 如果左子节点都不是目标节点，则递归右子树。
+     * 3、如果右子节点不为空，
+     * 3.1、右子节点是目标节点，则this.right=null，结束递归。
+     * 3.2、右子节点不是目标节点，则继续递归右子树，直到找到。
+     */
+    public void remove(T value) {
+        //左子树不为空
+        if (this.left != null && this.left.data.equals(value)) {
+            this.left = null;
+        }
+        //右子树不为空
+        if (this.right != null && this.right.data.equals(value)) {
+            this.right = null;
+        }
+        //递归查找左子树
+        if (this.left != null) {
+            this.left.remove(value);
+        }
+        //递归查找右子树
+        if (this.right != null) {
+            this.right.remove(value);
+        }
 
+    }
 }
 

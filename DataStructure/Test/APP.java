@@ -53,5 +53,19 @@ public class APP {
 
         TreeNode<Integer> in = root.postSearch(3);
         System.out.println(in);
+
+        /**
+         * 删除二叉树
+         */
+        binaryTree.remove(2);
+        System.out.print("前序遍历：");
+        root.preOrder();  //前序遍历
+        System.out.println();
+        System.out.print("中序遍历：");
+        root.inOrder();   //中序遍历
+        System.out.println();
+        System.out.print("后序遍历：");
+        root.postOrder(); //后序遍历
+        System.out.println();
     }
 }
