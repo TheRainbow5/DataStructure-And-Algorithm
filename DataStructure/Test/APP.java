@@ -1,3 +1,4 @@
+import chap7_Tree.ArrayBinaryTree;
 import chap7_Tree.BinaryTree;
 import chap7_Tree.TreeNode;
 import org.junit.jupiter.api.Test;
@@ -67,5 +68,22 @@ public class APP {
         System.out.print("后序遍历：");
         root.postOrder(); //后序遍历
         System.out.println();
+    }
+
+    /**
+     * 测试顺序二叉树
+     */
+    @Test
+    public void testABT() {
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
+        ArrayBinaryTree abt = new ArrayBinaryTree(arr);
+        System.out.print("前序遍历：");
+        abt.preOrder(0);
+        System.out.println();
+        System.out.print("中序遍历：");
+        abt.inOrder(0);
+        System.out.println();
+        System.out.print("后序遍历：");
+        abt.postOrder(0);
     }
 }
